@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+</head>
+<body>
+    <img id="part1" src="ImgPuzzle/funny-cat1_part1x1.jpg" height="160" width="800" onclick="doi1()"/><br/>
+    <img id="part2" src="ImgPuzzle/funny-cat1_part2x1.jpg" height="160" width="800" onclick="doi2()"/><br/>
+    <img id="part3" src="ImgPuzzle/funny-cat1_part3x1.jpg" height="160" width="800" onclick="doi3()"/><br/>
+    <img id="part4" src="ImgPuzzle/funny-cat1_part4x1.jpg" height="160" width="800" onclick="doi4()"/><br/>
+    <img id="part5" src="ImgPuzzle/funny-cat1_part5x1.jpg" height="160" width="800" onclick="doi5()"/><br/>
+
+    <script>
+        let kiemtra1;
+        let kiemtra2;
+        let kiemtra3;
+        let kiemtra4;
+        let kiemtra5;
+
+        let hinh1 = document.getElementById("part1");
+        let hinh2 = document.getElementById("part2");
+        let hinh3 = document.getElementById("part3");
+        let hinh4 = document.getElementById("part4");
+        let hinh5 = document.getElementById("part5");
+
+        function doi1() {
+            if(hinh1.src.endsWith("funny-cat1_part1x1.jpg")){
+                kiemtra1 = 1;
+                console.log(kiemtra1);
+                document.getElementById("part1").src = "ImgPuzzle/monkey_part1x1.jpg";
+            }else if(hinh1.src.endsWith("monkey_part1x1.jpg")){
+                kiemtra1 = 2;
+                console.log(kiemtra1);
+                document.getElementById("part1").src = "ImgPuzzle/panda_swap_part1x1.jpg";
+            }else if(hinh1.src.endsWith("panda_swap_part1x1.jpg")){
+                kiemtra1 = 2;
+                console.log(kiemtra1);
+                document.getElementById("part1").src = "ImgPuzzle/funny-cat1_part1x1.jpg";
+            }
+            kiemtra()
+        }
+
+        function doi2() {
+            if(hinh2.src.endsWith("funny-cat1_part2x1.jpg")){
+                kiemtra2 = 1;
+                console.log(kiemtra2);
+                document.getElementById("part2").src = "ImgPuzzle/monkey_part2x1.jpg";
+            }else if(hinh2.src.endsWith("monkey_part2x1.jpg")){
+                kiemtra2 = 2;
+                console.log(kiemtra2);
+                document.getElementById("part2").src = "ImgPuzzle/panda_swap_part2x1.jpg";
+            }else if(hinh2.src.endsWith("panda_swap_part2x1.jpg")){
+                kiemtra2 = 3;
+                console.log(kiemtra2);
+                document.getElementById("part2").src = "ImgPuzzle/funny-cat1_part2x1.jpg";
+            }
+            kiemtra()
+        }
+
+        function doi3() {
+            if(hinh3.src.endsWith("funny-cat1_part3x1.jpg")){
+                kiemtra3 = 1;
+                console.log(kiemtra3);
+                document.getElementById("part3").src = "ImgPuzzle/monkey_part3x1.jpg";
+            }else if(hinh3.src.endsWith("monkey_part3x1.jpg")){
+                kiemtra3 = 2;
+                console.log(kiemtra3);
+                document.getElementById("part3").src = "ImgPuzzle/panda_swap_part3x1.jpg";
+            }else if(hinh3.src.endsWith("panda_swap_part3x1.jpg")){
+                kiemtra3 = 3;
+                console.log(kiemtra3);
+                document.getElementById("part3").src = "ImgPuzzle/funny-cat1_part3x1.jpg";
+            }
+            kiemtra()
+        }
+
+        function doi4() {
+            if(hinh4.src.endsWith("funny-cat1_part4x1.jpg")){
+                kiemtra4 = 1;
+                console.log(kiemtra4);
+                document.getElementById("part4").src = "ImgPuzzle/monkey_part4x1.jpg";
+            }else if(hinh4.src.endsWith("monkey_part4x1.jpg")){
+                kiemtra4 = 2;
+                console.log(kiemtra4);
+                document.getElementById("part4").src = "ImgPuzzle/panda_swap_part4x1.jpg";
+            }else if(hinh4.src.endsWith("panda_swap_part4x1.jpg")){
+                kiemtra4 = 3;
+                console.log(kiemtra4);
+                document.getElementById("part4").src = "ImgPuzzle/funny-cat1_part4x1.jpg";
+            }
+            kiemtra()
+        }
+        function doi5() {
+            if(hinh5.src.endsWith("funny-cat1_part5x1.jpg")){
+                kiemtra5 = 1;
+                console.log(kiemtra5);
+                document.getElementById("part5").src = "ImgPuzzle/monkey_part5x1.jpg";
+            }else if(hinh5.src.endsWith("monkey_part5x1.jpg")){
+                kiemtra5 = 2;
+                console.log(kiemtra5);
+                document.getElementById("part5").src = "ImgPuzzle/panda_swap_part5x1.jpg";
+            }else if(hinh5.src.endsWith("panda_swap_part5x1.jpg")){
+                kiemtra5 = 3;
+                console.log(kiemtra5);
+                document.getElementById("part5").src = "ImgPuzzle/funny-cat1_part5x1.jpg";
+            }
+            kiemtra()
+        }
+        function kiemtra() {
+            if (kiemtra1 === kiemtra2 && kiemtra2 === kiemtra3 && kiemtra3 === kiemtra4 && kiemtra4 === kiemtra5 && kiemtra5 === kiemtra1){
+                alert("Hoàn thành!")
+            }
+        }
+    </script>
+</body>
+</html>
